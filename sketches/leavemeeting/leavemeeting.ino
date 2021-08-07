@@ -4,7 +4,7 @@ const int NUMBUTTONS = 1;
 const int MINBUTTON = 2;
 const int MAXBUTTON = 21;
 const int RXLED = 17;
-int pressed[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int pressed[15] = { 0 };
 
 boolean validButton(int i) {
   return i <= MINBUTTON+NUMBUTTONS && i <= MAXBUTTON;
@@ -60,10 +60,10 @@ void doReleasedAction(int pin) {
   switch(pin) {
     case 2:
     // Uncomment the following if you want to trigger action on release
-    //Keyboard.press(KEY_LEFT_ALT);
-    //Keyboard.press(KEY_F4);
-    //delay(100);
-    //Keyboard.releaseAll();
+    /* Keyboard.press(KEY_LEFT_ALT);
+    Keyboard.press(KEY_F4);
+    delay(100);
+    Keyboard.releaseAll(); */
     break;
   }
 }
